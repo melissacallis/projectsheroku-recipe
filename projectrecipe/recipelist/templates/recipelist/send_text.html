@@ -1,0 +1,20 @@
+{% extends 'recipelist/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<body>
+    <h1>Send Text Message</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+
+
+</body>
+
+{% endblock %}
+
+</html>

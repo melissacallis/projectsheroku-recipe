@@ -1,0 +1,13 @@
+{% extends 'recipelist/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <h1>Text Submission Successful</h1>
+        <p>Your text message has been successfully sent.</p>
+        <a href="{% url 'recipelist:index' %}" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+{% endblock %}

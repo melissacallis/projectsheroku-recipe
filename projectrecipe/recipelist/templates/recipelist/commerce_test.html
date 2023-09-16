@@ -1,0 +1,11 @@
+{% extends 'recipelist/layout.html' %}
+
+{% block content %}
+    <h1>Nutrition Data</h1>
+
+    <h2>Central Bank Rates</h2>
+    {{ table_html_central_bank | safe }}
+
+    <h2>Non-Central Bank Rates</h2>
+    {{ table_html_non_central_bank | safe }}
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'recipelist/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 ms-auto"><p class="lead"></p>
+<h2>Selected Items/Grocery List:</h2>
+<ul>
+    {% for ingredient in ingredients %}
+        {% if ingredient in request.session.selected_ingredients %}
+            <li>{{ ingredient }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<a href="{% url 'recipelist:send_text' %}" class="btn btn-primary">Send Text</a>
+</div>
+
+        <div class="col-lg-6 ms-auto"><p class="lead"></p>
+
+
+            <img src="{% static 'images/groceries.png' %}" width="500" height="400" alt="Groceries">
+
+            </div>
+            </div>
+
+
+
+            <div class="container">
+    <h1>Nutrition Data</h1>
+
+    {{ table_html | safe }}
+            </div>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

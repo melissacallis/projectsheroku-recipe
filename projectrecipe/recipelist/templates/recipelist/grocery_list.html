@@ -1,0 +1,68 @@
+
+{% extends 'recipelist/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 ms-auto"><p class="lead"></p>
+<h2>Selected Items/Grocery List:</h2>
+<ul>
+    {% for ingredient in ingredients %}
+        {% if ingredient in request.session.selected_ingredients %}
+            <li>{{ ingredient }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
+<a href="{% url 'recipelist:api_test' %}">Link</a>
+
+<form action="{% url 'recipelist:api_test' %}" method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="recipe_name" value="{{ recipe_name }}">
+  <button type="submit" class="btn btn-primary">Nutrition Data</button>
+</form>
+<br>
+
+
+
+</div>
+
+        <div class="col-lg-6 ms-auto"><p class="lead"></p>
+
+
+            <img src="{% static 'images/groceries.png' %}" width="500" height="400" alt="Groceries">
+
+            </div>
+            </div>
+
+
+
+
+<a href="{% url 'recipelist:api_test' %}">Link</a>
+
+<form action="{% url 'recipelist:api_test' %}" method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="recipe_name" value="{{ recipe_name }}">
+  <button type="submit" class="btn btn-primary">Commerce Data</button>
+</form>
+
+
+
+{% if table_html %}
+{{ table_html | safe }}
+{% else %}
+<p>No data available.</p>
+{% endif %}
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,22 @@
+{% extends 'recipelist/layout.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Ingredients</title>
+</head>
+{% block content %}
+<body>
+
+<h1>Get Ingredients</h1>
+<form method="post" action="{% url 'recipelist:get_ingredients' %}">
+    {% csrf_token %}
+    <label for="url">Enter the URL of an Allrecipes.com recipe:</label><br>
+    <input type="text" id="url" name="url"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
+
