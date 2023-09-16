@@ -28,9 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-GRAPHENE = {
-    "SCHEMA": "recipelist.schema.schema"
-}
 
 CSRF_TRUSTED_ORIGINS = [
     'https://melissacallis-code50-109395704-97g44q6v63pp5r-8000.preview.app.github.dev',

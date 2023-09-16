@@ -1,6 +1,5 @@
 from django.urls import path, include
 from . import views
-from graphene_django.views import GraphQLView
 from django.views.generic import TemplateView
 
 
@@ -16,7 +15,7 @@ urlpatterns=[
     path('adjusted_search/', views.adjusted_search, name='adjusted_search'),
     path('grocery_list/', views.grocery_list, name='grocery_list'),
     #path("graphql", GraphQLView.as_view(graphiql=True), schema=schema),
-    path("graphql/", (GraphQLView.as_view(graphiql=True))),
+    #path("graphql/", (GraphQLView.as_view(graphiql=True))),
     #path('add_to_cart/', views.add_to_cart, name='add_to_cart'),
     #path('login_heb/', views.login_heb, name='login_heb'),
     path('api_test/', views.api_test, name='api_test'),
