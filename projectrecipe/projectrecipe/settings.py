@@ -38,6 +38,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://melissacallis-code50-109395704-97g44q6v63pp5r-8081.preview.app.github.dev'
     'https://127.0.0.1',
     'https://melissacallis-code50-109395704-97g44q6v63pp5r-8000.app.github.dev/',
+    'https://localhost:8000',
     
 ]
 

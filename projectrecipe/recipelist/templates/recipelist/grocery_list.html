@@ -20,7 +20,7 @@
 </ul>
 
 
-<a href="{% url 'recipelist:api_test' %}">Link</a>
+<a href="{% url 'recipelist:api_test' %}"></a>
 
 <form action="{% url 'recipelist:api_test' %}" method="POST">
   {% csrf_token %}
@@ -44,20 +44,14 @@
 
 
 
-<a href="{% url 'recipelist:api_test' %}">Link</a>
 
-<form action="{% url 'recipelist:api_test' %}" method="POST">
-  {% csrf_token %}
-  <input type="hidden" name="recipe_name" value="{{ recipe_name }}">
-  <button type="submit" class="btn btn-primary">Commerce Data</button>
-</form>
 
 
 
 {% if table_html %}
 {{ table_html | safe }}
 {% else %}
-<p>No data available.</p>
+<p>.</p>
 {% endif %}
 
 {% endblock %}
