@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#o^f1(@b#p44qst7_*1*b@p)+h4h1%ss$&bit$m$5cg83wq^#c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['projectsheroku-recipes-6db00650a597.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['projectsheroku-recipes-6db00650a597.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 
@@ -38,6 +38,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://melissacallis-code50-109395704-97g44q6v63pp5r-8081.preview.app.github.dev'
     'https://127.0.0.1',
     'https://melissacallis-code50-109395704-97g44q6v63pp5r-8000.app.github.dev/',
+    
 ]
 
 # Application definition

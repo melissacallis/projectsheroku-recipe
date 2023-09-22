@@ -10,13 +10,13 @@
 {% block content %}
 <body>
 
-<h1>Get Ingredients</h1>
-<form method="post" action="{% url 'recipelist:get_ingredients' %}">
-    {% csrf_token %}
-    <label for="url">Enter the URL of an Allrecipes.com recipe:</label><br>
-    <input type="text" id="url" name="url"><br><br>
-    <input type="submit" value="Submit">
-</form>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Find your taste...</h1>
+            <p class="lead">Use the search above to find a recipe and text it to your ATT phone provider.</p>
+            <img src="https://s41230.pcdn.co/wp-content/uploads/2022/02/vegan-super-bowl-recipes-HEADER.jpg" class="img-fluid" alt="Super Bowl Recipes">
+        </div>
+    </div>
 
 {% endblock %}
 
